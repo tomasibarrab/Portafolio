@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tomas Ibarra - Rails Developer</title>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<header id='main_navigation' class='clearfix'>
+		<%= link_to "Tomás Ibarra",  root_path, :class => "name" %>
+		<nav>
+			<%= link_to '<i class="fa fa-file-text"></i> Articles'.html_safe, posts_path %>
+			<a href="#"><i class="fa fa-folder-open"></i> Projects</a>
+			<%= link_to '<i class="fa fa-user"></i> Contact'.html_safe, contact_index_path %>
+		</nav>
+	</header>
+
+	<%= yield %>
+
+	<footer id="main_footer">
+		<p class="copyright">&copy; 2016 Tomás Ibarra</p>
+			<nav>
+				<a href="https://github.com/tomasibarrab" target="_blank"><i class="fa fa-github"></i></a>
+				<a href="https://twitter.com/TomasIbarraB" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.facebook.com/tomas.ibarraballesteros" target="_blank"><i class="fa fa-facebook"></i></a>
+			</nav>	
+	</footer>
+
+</body>
+</html>

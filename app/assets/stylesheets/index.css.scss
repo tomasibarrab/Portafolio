@@ -1,0 +1,59 @@
+$dark: #292323;
+$light: #71706e;
+$highlight: #c10707;
+$border: #71706e;
+
+.col-1, .col-2, .col-3 {
+	float: left;
+}
+
+.col-1{
+	width: 45%;
+	padding: 0 5% 0 2.5%;
+}
+
+.col-2, .col-3{
+	width: 27.5%;
+	padding: 0 2.5%;
+}
+
+.homepage_content{
+	 h2{
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
+	h3{
+		font-size: 1.35em;
+		font-weight: 400;
+		margin-bottom: .5em;
+		a{
+				text-decoration: none;
+				color: $dark;
+				font-size: 1.25rem;
+				&:hover{
+				color: $highlight;
+				}
+			}
+	}
+	.date{
+		font-size: .9em;
+		margin-bottom: 2em;
+		color: $light;
+	}
+	p{
+		margin: 0 0 .75em 0;
+		text-align: justify;
+    	text-justify: inter-word;
+	}
+	.about{
+		padding: 0 7.5% 0 0;
+	}
+	a{
+		color: $highlight;
+		font-weight: 700;
+		text-decoration: none;
+		&:hover{
+			color: $dark;
+		}
+	}
+}

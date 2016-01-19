@@ -1,0 +1,27 @@
+<div class="wrapper wrapper_padding clearfix">
+			<div class="col-1 about homepage_content">
+				<h2>About</h2>
+				<hr>
+				<p>A system engineer graduated from the Universidad de Sonora on April 2016, member of the CSI-Pro development group.</p>
+				<p>I'm a recent <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> developer who likes daily challenges and auto-learning, also a gamer by hobbie.</p>
+				<p>Currently i'm doing my internship at <a href="http://nearsoft.com/" target="_blank">Nearsoft</a> to hopefully take part of it in the future</p>
+			</div>
+			<div class="col-2 homepage_content">
+				<h2>Stuffs i've written</h2>
+				<hr>
+				<% @posts.each do |post|%>
+					<h3><a href="#"><%= link_to post.title, post%></a></h3>
+					<p class="date"><%= post.created_at.strftime('%B %d, %Y')%></p>
+				<%end%>
+			</div>
+			<div class="col-3 homepage_content">
+				<h2>Stuffs I've Built</h2>
+				<hr>
+				<h3><a href="#">Notie</a></h3>
+				<p class="date">July 27, 2015</p>
+				<h3><a href="#">NoteNote</a></h3>
+				<p class="date">December 28, 2015</p>
+				<h3><a href="#">Fidelta Mobile App</a></h3>
+				<p class="date">January 20, 2016</p>
+			</div>
+</div>
