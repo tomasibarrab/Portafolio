@@ -14,9 +14,9 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 		if @post.save
-			redirect_to @post, notice: 'Post created'
+			redirect_to @post, notice: 'Post created.'
 		else
-			render 'new', notice: 'No jalo'
+			render 'new', notice: 'Post unable to be created.'
 		end
 	end
 
