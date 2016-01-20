@@ -17,6 +17,12 @@
 			<%= link_to '<i class="fa fa-user"></i> Contact'.html_safe, contacts_path %>
 		</nav>
 	</header>
+	
+	<%if notice%>
+		<p class="notice"><%= notice %></p>
+	<%elsif alert%>
+    	<p class="alert"><%= alert %></p>
+    <%end%>
 
 	<%= yield %>
 
