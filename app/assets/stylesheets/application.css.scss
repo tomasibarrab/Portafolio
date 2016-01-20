@@ -205,6 +205,12 @@ input[type="submit"], .button{
 	display: none;
 }
 
+.notice, .alert{
+	text-align: center;
+	padding: 1em 0;
+	border-bottom: 2px solid $border;
+}
+
 @import 'index';
 @import '_welcome';
 @import '_posts_projects';

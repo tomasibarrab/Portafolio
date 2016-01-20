@@ -114,3 +114,23 @@
 	}
 } 
 
+#admin_links{
+	border-top: 2px solid $border;
+	border-bottom: 2px solid $border;
+	text-align: center;
+	padding: 1em 0;
+	margin: 3em 0;
+	a{
+		color: $light;
+		font-weight: 700;
+		font-size: .8em;
+		padding: 0 4em;
+		text-transform: uppercase;
+		text-decoration: none;
+		&:hover{
+			color: $highlight;
+		}
+
+	}
+}
+

@@ -15,6 +15,9 @@
 			<%= link_to '<i class="fa fa-file-text"></i> Articles'.html_safe, posts_path %>
 			<%= link_to '<i class="fa fa-folder-open"></i> Projects'.html_safe, projects_path %>
 			<%= link_to '<i class="fa fa-user"></i> Contact'.html_safe, contacts_path %>
+			<%if user_signed_in?%>
+				<%=link_to 'Sign Out', destroy_user_session_path, method: :delete%>
+			<%end%>
 		</nav>
 	</header>
 	
