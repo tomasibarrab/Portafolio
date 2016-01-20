@@ -69,6 +69,7 @@ p, ul, ol{
 body{
 	font-family: 'Raleway', sans-serif;
 	background-color: $back;
+	width:100%;
 }
 
 .wrapper{
@@ -198,6 +199,10 @@ input[type="submit"], .button{
 .button_wrapper{
 	margin: 4em 0 0 0;
 	text-align: center;
+}
+
+.hidden{
+	display: none;
 }
 
 @import 'index';
