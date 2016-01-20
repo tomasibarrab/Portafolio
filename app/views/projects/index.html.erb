@@ -1,0 +1,12 @@
+<h1 id="page_title">Projects i've built</h1>
+
+<div id="post_wrapper" class="skinny_wrapper">
+	<div class="post">
+		<% @projects.each do |project|%>
+			<p class="date"><%= project.created_at.strftime('%B %d, %Y')%></p>
+			<h2><a href="#"><%= link_to project.title, project%></a></h2>
+			<hr>
+		<%end%>
+	</div>
+	<%= will_paginate @projects %>
+</div>

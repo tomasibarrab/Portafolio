@@ -1,0 +1,28 @@
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+	<header>
+		<p class="date"><%= @project.created_at.strftime('%B %d, %Y')%></p>
+		<h1><%= @project.title %></h1>
+		<hr>
+	</header>
+
+	<div id="content">
+		<p><%= markdown @project.description %></p>
+		<div class="button_wrapper">
+			<a href="<%= @project.link%>" class="project_button" target="_blank">Visit <%= @project.title%></a>
+		</div>
+	</div>
+	<hr>
+	<%=link_to 'Edit', edit_project_path(@project)%>
+	<%=link_to 'Delete', project_path(@project), method: :delete, data: {confirm: "Are you sure?"}%>
+
+	<div id="share_box">
+		<p>Share: <%= @project.title %></p>
+		<!--Twitter-->
+		<a onclick="javascript:window.open('http://twitter.com/share?text=<%= @project.title%> by @tomasibarrab - &amp;url=<%=url_for([@project, {only_path: false}])%>', '_blank', 'width=800, height=256, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+		<!--Facebook-->
+		<a onclick="javascript:window.open('http://facebook.com/share.php?u=<%=url_for([@project, {only_path: false}])%>', '_blank', 'width=800, height=450, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+	</div>
+	<hr>
+	<%= render 'disqus'%>
+</div>
+
